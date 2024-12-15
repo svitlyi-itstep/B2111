@@ -18,6 +18,7 @@ class Character:
 
     def take_damage(self, damage):
         self.health = max(self.health - damage, 0)
+        return damage
 
     def attack(self, target):
-        target.take_damage(self.damage)
+        return target.take_damage(self.damage)
